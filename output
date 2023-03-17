@@ -1,0 +1,46 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-03-17 12:04 MST\n
+Nmap scan report for 192.168.1.1\n
+Host is up (0.0035s latency).\n
+MAC Address: 6C:CD:D6:6D:83:06 (Netgear)\n
+Nmap scan report for 192.168.1.35\n
+Host is up (0.34s latency).\n
+MAC Address: F0:EF:86:0A:F0:E7 (Google)\n
+Nmap scan report for 192.168.1.54\n
+Host is up (0.23s latency).\n
+MAC Address: 34:2F:BD:91:2B:AC (Nintendo)\n
+Nmap scan report for Google-Home-Mini (192.168.1.67)\n
+Host is up (0.21s latency).\n
+MAC Address: E4:F0:42:5C:8F:08 (Google)\n
+Nmap scan report for RingStickUpCam-39 (192.168.1.68)\n
+Host is up (0.29s latency).\n
+MAC Address: 34:3E:A4:61:C3:39 (Ring)\n
+Nmap scan report for 192.168.1.73\n
+Host is up (0.0091s latency).\n
+MAC Address: 64:52:99:6B:CF:9E (The Chamberlain Group)\n
+Nmap scan report for 192.168.1.145\n
+Host is up (0.30s latency).\n
+MAC Address: 2A:78:51:34:5D:84 (Unknown)\n
+Nmap scan report for 192.168.1.147\n
+Host is up (0.30s latency).\n
+MAC Address: 6C:AD:F8:35:4E:0D (AzureWave Technology)\n
+Nmap scan report for Tam-s-Z-Flip3 (192.168.1.151)\n
+Host is up (0.15s latency).\n
+MAC Address: 06:C4:99:18:B5:1E (Unknown)\n
+Nmap scan report for 192.168.1.177\n
+Host is up (0.30s latency).\n
+MAC Address: 9E:D6:24:7C:E6:29 (Unknown)\n
+Nmap scan report for HPB78580 (192.168.1.188)\n
+Host is up (0.21s latency).\n
+MAC Address: 48:9E:BD:B7:85:80 (HP)\n
+Nmap scan report for 192.168.1.207\n
+Host is up (0.17s latency).\n
+MAC Address: E6:00:AF:46:81:89 (Unknown)\n
+Nmap scan report for Chromecast (192.168.1.239)\n
+Host is up (0.23s latency).\n
+MAC Address: A4:77:33:4A:DC:A0 (Google)\n
+Nmap scan report for 192.168.1.241\n
+Host is up (0.20s latency).\n
+MAC Address: 1E:B0:DA:4D:B6:6A (Unknown)\n
+Nmap scan report for Debbies-MBP (192.168.1.165)\n
+Host is up.\n
+Nmap done: 256 IP addresses (15 hosts up) scanned in 16.19 seconds\n
