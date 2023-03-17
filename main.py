@@ -31,13 +31,13 @@ for line in output.splitlines():
     if 'Nmap scan report for' in line:
         device = {} #new device found
         device['ip_address'] = line.split()[4]
-        print(line.split()[4])
+        #print(line.split()[4])
         device['hostname'] = socket.getfqdn(device['ip_address'])
-        print(device['hostname'])
+        #print(device['hostname'])
         devices.append(device)
-    '''
     elif 'MAC Address' in line:
         device['mac_address'] = line.split()[2]
+        #print(device['mac_address'])
     elif 'OS details' in line:
         device['operating_system'] = line.split(':')[1].strip()
     elif 'open' in line:
@@ -45,16 +45,17 @@ for line in output.splitlines():
         service = line.split()[2]
         device['ports'] = device.get('ports', [])
         device['ports'].append((port, service))
-    '''
-'''
+   
+
 # print the device information
 for device in devices:
     print('IP Address:', device['ip_address'])
     print('Hostname:', device['hostname'])
     print('MAC Address:', device['mac_address'])
     print('Operating System:', device.get('operating_system', 'Unknown'))
-    print('Open Ports:')
-    for port, service in device.get('ports', []):
-        #print(f"\t{port}/{service}")
-        print('\t{}/{}'.format(port, service))
-'''
+    if device.get('ports', []): #only prints if device has an open por
+        print('Open Ports:')
+        for port, service in device.get('ports', []):
+            #print(f"\t{port}/{service}")
+            print('\t{}/{}'.format(port, service))
+    print("\n")
