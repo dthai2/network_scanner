@@ -10,9 +10,9 @@ last_dot = ip_address.rfind('.')
 network_addr = ip_address[:last_dot] + '.0'
 subnet = network_addr + '/24'
 
-print("Hostname:" + hostname)
-print("IP address:" + ip_address)
-print("subnet:" + subnet)
+#print("Hostname:" + hostname)
+#print("IP address:" + ip_address)
+#print("subnet:" + subnet)
 
 # define the nmap command to scan the network
 cmd = ['nmap', '-sP', subnet]
@@ -29,12 +29,15 @@ for line in output.splitlines():
     if 'Nmap scan report for' in line:
         print('\n')
         device = {} #new device found
-        device['ip_address'] = line.split()[4]
-        #print(line.split()[4])
+        tempLine = line.split()
+        if len(tempLine) == 6: #host name found
+            device['ip_address'] = line.split()[5]
+            device['hostname'] = line.split()[4]
+        else:
+            device['ip_address'] = line.split()[4]
+            device['hostname'] = "Unknown Host" #socket.gethostbyaddr('192.168.1.1')
         print('IP Address: ' + device['ip_address'])
-        device['hostname'] = socket.getfqdn(device['ip_address'])
         print('Hostname: ' + device['hostname'])
-        #print(device['hostname'])
         devices.append(device)
     elif 'MAC Address' in line:
         device['mac_address'] = line.split()[2]
